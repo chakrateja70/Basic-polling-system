@@ -52,7 +52,7 @@ export const LoginPage = () => {
     >
       <h2 className="mb-4 text-center">Login</h2>
       <div className="form-group">
-        <label htmlFor="email">Your email</label>
+        <label htmlFor="email">Email</label>
         <input
           type="email"
           id="email"
@@ -64,7 +64,7 @@ export const LoginPage = () => {
         />
       </div>
       <div className="form-group">
-        <label htmlFor="password">Your password</label>
+        <label htmlFor="password">Password</label>
         <input
           type="password"
           id="password"

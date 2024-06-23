@@ -63,7 +63,7 @@ export const SignupPage = () => {
         <h2 className="text-center mb-4" style={styles.heading}>Register</h2>
 
         <div className="mb-4">
-          <label htmlFor="name" className="form-label">Your name</label>
+          <label htmlFor="name" className="form-label">Name</label>
           <input
             type="text"
             id="name"
@@ -76,7 +76,7 @@ export const SignupPage = () => {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="email" className="form-label">Your email</label>
+          <label htmlFor="email" className="form-label">Email</label>
           <input
             type="email"
             id="email"
@@ -89,7 +89,7 @@ export const SignupPage = () => {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="phone" className="form-label">Your phone number</label>
+          <label htmlFor="phone" className="form-label">Mobile number</label>
           <input
             type="text"
             id="phone"
@@ -102,7 +102,7 @@ export const SignupPage = () => {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="password" className="form-label">Your password</label>
+          <label htmlFor="password" className="form-label">Password</label>
           <input
             type="password"
             id="password"
@@ -114,7 +114,7 @@ export const SignupPage = () => {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="repeat-password" className="form-label">Repeat password</label>
+          <label htmlFor="repeat-password" className="form-label">confirm password</label>
           <input
             type="password"
             id="repeat-password"
