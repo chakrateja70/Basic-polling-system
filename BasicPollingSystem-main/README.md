@@ -1,7 +1,7 @@
 # BasicPollingSystem
 create dotenv file :
 
-PORT = 3000
+PORT = 3000 <br/>
 JWT_SECRET = jwtSecretKey
 DB_HOST= "localhost"
 DB_USER= "root" 
