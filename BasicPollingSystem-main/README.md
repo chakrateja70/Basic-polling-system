@@ -8,12 +8,12 @@ DB_USER= "root" <br/>
 DB_PASSWORD= <password> <br/>
 
 <ul>
-  <li><h4>Before executing</h4> </li>
-  <li>Client folder: 
+  <li><h2>Before executing</h2> </li>
+  <li><h3>Client folder:</h3> 
     <p>Run Command: "npm install" </p>
     <p>Run command: "npm start" </p>
   </li>
-  <li>Server folder: 
+  <li><h3>Server folder:</h3> 
     <p>Run Command: "npm install" </p>
     <p>Run command: "npm start" </p>
   </li>
