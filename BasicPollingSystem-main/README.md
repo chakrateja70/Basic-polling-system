@@ -5,7 +5,7 @@ PORT = 3000 <br/>
 JWT_SECRET = jwtSecretKey <br/>
 DB_HOST= "localhost" <br/>
 DB_USER= "root" <br/>
-DB_PASSWORD= <password> <br/>
+DB_PASSWORD= "Enter your MYSql password" <br/>
 <h2>Before executing</h2>
 <ul>
   <li><h3>Client folder:</h3> 
