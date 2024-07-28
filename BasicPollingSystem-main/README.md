@@ -17,5 +17,9 @@ DB_PASSWORD= <password> <br/>
     <p>Run Command: "npm install" </p>
     <p>Run command: "npm start" </p>
   </li>
+  
 </ul>
 
+<h2>To find databases and tables in MYSql</h2> 
+<p>SHOW DATABASES;</p>
+<P>SHOW TABLES;</P>
