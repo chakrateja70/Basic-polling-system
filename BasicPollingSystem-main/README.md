@@ -8,13 +8,13 @@ DB_USER= "root" <br/>
 DB_PASSWORD= <password> <br/>
 
 <ul>
-  <li>Before strat executing: </li>
+  <li>Before start executing: </li>
   <li>Client folder: 
-    <p>Runn Command: "npm install" </p>
+    <p>Run Command: "npm install" </p>
     <p>Run command: "npm start" </p>
   </li>
-  <li>Client folder: 
-    <p>Runn Command: "npm install" </p>
+  <li>Server folder: 
+    <p>Run Command: "npm install" </p>
     <p>Run command: "npm start" </p>
   </li>
 </ul>
