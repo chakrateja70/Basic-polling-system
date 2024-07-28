@@ -8,7 +8,7 @@ DB_USER= "root" <br/>
 DB_PASSWORD= <password> <br/>
 
 #Client 
-<p>Run command:  <span> npm start<span> </p>
+<p>Run command: "npm start </p>
 
 #Server 
-<P>Run Command: <h3>npm start</h3></P>
+<p>Run command: "npm start </p>
