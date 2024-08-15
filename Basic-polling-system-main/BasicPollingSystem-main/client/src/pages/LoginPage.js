@@ -34,7 +34,7 @@ export const LoginPage = () => {
         },
         body: JSON.stringify({ email, password }),
         // credentials: "include",  
-        withCredentials: true,
+    
       });
 
       if (response.ok) {
