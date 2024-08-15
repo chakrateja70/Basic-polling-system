@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
+import axios from "axios";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const SignupPage = () => {
@@ -11,6 +12,7 @@ export const SignupPage = () => {
   const [role, setRole] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
+  axios.defaults.withCredentials = true;
 
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);
@@ -22,6 +24,9 @@ export const SignupPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    axios.post("https://basic-polling-system.vercel.app/signup", { name, email, phone, password, repeatPassword, role })
+      .then(result => console.log(result))
+      .catch(err => console.log(err));
 
     if (password !== repeatPassword) {
       alert("Password not matching!");
