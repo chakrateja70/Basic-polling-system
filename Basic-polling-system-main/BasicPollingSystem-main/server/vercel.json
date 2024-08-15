@@ -9,6 +9,10 @@
     "routes": [
         {
             "src": "/(.*)",
+            "headers": {
+                "Access-Control-Allow-Origin": "https://basic-polling-system-client.vercel.app",
+                "Access-Control-Allow-Credentials": "true"
+              },
             "dest": "/"
         }
     ]
