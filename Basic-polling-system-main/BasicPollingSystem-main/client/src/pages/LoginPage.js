@@ -27,7 +27,7 @@ export const LoginPage = () => {
 
 
     try {
-      const response = await fetch(`https://basic-polling-system.vercel.app/api/${role}/login`, {
+      const response = await fetch(`api/${role}/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
