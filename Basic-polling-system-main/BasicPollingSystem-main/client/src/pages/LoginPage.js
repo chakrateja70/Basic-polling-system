@@ -21,7 +21,7 @@ export const LoginPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    axios.post(`https://basic-polling-system.vercel.app/api/${role}/login`, { email, password, role })
+    axios.post(`https://basic-polling-system.vercel.app`, { email, password, role })
       .then(result => console.log(result))
       .catch(err => console.log(err));
 
