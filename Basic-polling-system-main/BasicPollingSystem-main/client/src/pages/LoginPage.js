@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
+import axios from "axios";
 
 export const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("");
+  axios.defaults.withCredentials = true;
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -19,6 +21,9 @@ export const LoginPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    axios.post("https://basic-polling-system.vercel.app/login", { email, password, role })
+      .then(result => console.log(result))
+      .catch(err => console.log(err));
 
     try {
       const response = await fetch(`/api/${role}/login`, {

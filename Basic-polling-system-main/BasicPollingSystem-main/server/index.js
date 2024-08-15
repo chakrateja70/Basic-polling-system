@@ -14,7 +14,7 @@ const app = express();
 
 //deploy in vercel
 app.use(cors({
-  origin: ["https://deploy-mern-1whq.vercel.app"],
+  origin: [""],
   methods: ["POST", "GET"],
   Credentials: true,
 }))
