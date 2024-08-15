@@ -33,7 +33,8 @@ export const LoginPage = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ email, password }),
-        credentials: "include",  
+        // credentials: "include",  
+        withCredentials: true,
       });
 
       if (response.ok) {
