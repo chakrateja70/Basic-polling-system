@@ -16,17 +16,12 @@ const app = express();
 
 
 app.use(cors({
-  origin: "https://basic-polling-system-client.vercel.app",
+  origin: "https://basic-polling-system-client.vercel.app",  // Use the specific origin
   methods: ["POST", "GET", "OPTIONS"],
-  credentials: true,
+  credentials: true,  // Allow credentials (cookies, HTTP auth, etc.)
 }));
 
-app.options('*', cors({
-  origin: "https://basic-polling-system-client.vercel.app",
-  methods: ["POST", "GET", "OPTIONS"],
-  credentials: true,
-}));
-
+app.options('*', cors());  // Handle preflight requests
 
 
 // Middleware
