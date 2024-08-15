@@ -1,19 +1,22 @@
 {
     "version": 2,
     "builds": [
-        {
-            "src": "*.js",
-            "use": "@vercel/node"
-        }
+      {
+        "src": "api/**/*.js",
+        "use": "@vercel/node"
+      }
     ],
     "routes": [
-        {
-            "src": "/(.*)",
-            "headers": {
-                "Access-Control-Allow-Origin": "https://basic-polling-system-client.vercel.app",
-                "Access-Control-Allow-Credentials": "true"
-              },
-            "dest": "/"
-        }
+      {
+        "src": "/api/(.*)",
+        "headers": {
+          "Access-Control-Allow-Origin": "https://basic-polling-system-client.vercel.app",
+          "Access-Control-Allow-Credentials": "true",
+          "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+          "Access-Control-Allow-Headers": "Content-Type"
+        },
+        "dest": "/api/$1"
+      }
     ]
-}
+  }
+  
