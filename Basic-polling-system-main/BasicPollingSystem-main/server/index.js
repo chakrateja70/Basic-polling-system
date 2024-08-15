@@ -14,7 +14,7 @@ const app = express();
 
 //deploy in vercel
 app.use(cors({
-  origin: ["https://basic-polling-system-client.vercel.app/"],
+  origin: ["https://basic-polling-system-client.vercel.app"],
   methods: ["POST", "GET"],
   Credentials: true,
 }))
