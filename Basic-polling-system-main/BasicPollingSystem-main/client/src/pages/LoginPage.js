@@ -21,13 +21,12 @@ export const LoginPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-      
+    axios.post(`https://basic-polling-system.vercel.app/api/${role}/login`, { email, password, role })
+      .then(result => console.log(result))
+      .catch(err => console.log(err));
+
     try {
-
-      const axiosResponse = await axios.post(`https://basic-polling-system.vercel.app/api/${role}/login`, { email, password, role });
-      console.log(axiosResponse);
-
-      const response = await fetch(`https://basic-polling-system.vercel.app/api/${role}/login`, {
+      const response = await fetch(`/api/${role}/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
