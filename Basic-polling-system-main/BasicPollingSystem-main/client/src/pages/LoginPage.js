@@ -25,6 +25,7 @@ export const LoginPage = () => {
       .then(result => console.log(result))
       .catch(err => console.log(err));
 
+
     try {
       const response = await fetch(`/api/${role}/login`, {
         method: "POST",

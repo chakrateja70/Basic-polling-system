@@ -14,10 +14,11 @@ const app = express();
 
 //deploy in vercel
 app.use(cors({
-  origin: ["https://basic-polling-system-client.vercel.app", "http://localhost:3000"],
+  origin: true,
   methods: ["POST", "GET"],
-  credentials: false,
-}))
+  credentials: true,
+}));
+
 
 // Middleware
 app.use(morgan("dev"));
