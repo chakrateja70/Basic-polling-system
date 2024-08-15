@@ -13,16 +13,11 @@ import { verifyToken } from "./middlewares/verifyToken.js";
 const app = express();
 
 //deploy in vercel
-
-
 app.use(cors({
-  origin: "https://basic-polling-system-client.vercel.app",  // Use the specific origin
-  methods: ["POST", "GET", "OPTIONS"],
-  credentials: true,  // Allow credentials (cookies, HTTP auth, etc.)
-}));
-
-app.options('*', cors());  // Handle preflight requests
-
+  origin: ["https://basic-polling-system-client.vercel.app"],
+  methods: ["POST", "GET"],
+  credentials: true,
+}))
 
 // Middleware
 app.use(morgan("dev"));

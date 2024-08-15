@@ -53,37 +53,36 @@ export const signupStudent = async (req, res) => {
 
 // Login Student
 export const loginStudent = async (req, res) => {
-  res.status(200).send("User logged in!");
-  // const { email, password } = req.body;
+  const { email, password } = req.body;
 
-  // try {
-  //   const [rows] = await studentPool.query(
-  //     "SELECT * FROM students WHERE email = ?",
-  //     [email]
-  //   );
+  try {
+    const [rows] = await studentPool.query(
+      "SELECT * FROM students WHERE email = ?",
+      [email]
+    );
 
-  //   if (rows.length === 0) {
-  //     return res.status(404).send("No student with this email!");
-  //   }
+    if (rows.length === 0) {
+      return res.status(404).send("No student with this email!");
+    }
 
-  //   const user = rows[0];
-  //   const passwordMatch = await bcrypt.compare(password, user.password);
+    const user = rows[0];
+    const passwordMatch = await bcrypt.compare(password, user.password);
 
-  //   if (!passwordMatch) {
-  //     return res.status(401).send("Wrong password!");
-  //   }
+    if (!passwordMatch) {
+      return res.status(401).send("Wrong password!");
+    }
 
-  //   const token = jwt.sign(
-  //     { email: user.email, name: user.name, role: "2" },
-  //     process.env.JWT_SECRET
-  //   );
+    const token = jwt.sign(
+      { email: user.email, name: user.name, role: "2" },
+      process.env.JWT_SECRET
+    );
 
-  //   res.cookie("token", token);
-  //   res.status(200).send("User logged in!");
-  // } catch (error) {
-  //   console.log(error);
-  //   res.status(500).send(error);
-  // }
+    res.cookie("token", token);
+    res.status(200).send("User logged in!");
+  } catch (error) {
+    console.log(error);
+    res.status(500).send(error);
+  }
 };
 
 // Update student
